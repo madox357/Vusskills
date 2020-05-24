@@ -11,6 +11,7 @@
         <img v-bind:src="src" alt="alt "/>
         <a v-bind:href="link">going to google</a>
         <p v-text="myText"></p>
+        <div v-html="myHtml"></div>
 
     </div>
 </body>
@@ -21,7 +22,8 @@
             src:"https://picsum.photos/200/300",
             alt:"Another image",
             link:"http://google.com",
-            myText:'Hello world from directive'
+            myText:'Hello world from directive',
+            myHtml:"<strong>Bijaya Limbu</strong>"
         }
 
     })
