@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ greeting }}</p>
+        <img v-bind:src="src" alt="alt "/>
+        <a v-bind:href="link">going to google</a>
+        <p v-text="myText"></p>
 
     </div>
 </body>
@@ -16,7 +18,10 @@
     new Vue({
         el:"#app",
         data:{
-            greeting:'Hello guys'
+            src:"https://picsum.photos/200/300",
+            alt:"Another image",
+            link:"http://google.com",
+            myText:'Hello world from directive'
         }
 
     })
