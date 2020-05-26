@@ -8,24 +8,40 @@
 </head>
 <body>
     <div id="app">
-        <img v-bind:src="src" alt="alt "/>
-        <a v-bind:href="link">going to google</a>
-        <p v-text="myText"></p>
-        <div v-html="myHtml"></div>
+        <div class="box" v-on:mousemove="getCoord">
+            Hover me
+        </div>
+        <p>x: {{x}} </p>
+        <p>y: {{y}} </p>
 
-    </div>
+        </div>
+        
+
+    
 </body>
 <script>
     new Vue({
         el:"#app",
         data:{
-            src:"https://picsum.photos/200/300",
-            alt:"Another image",
-            link:"http://google.com",
-            myText:'Hello world from directive',
-            myHtml:"<strong>Bijaya Limbu</strong>"
-        }
+            name:'Bijaya',
+            x: 0,
+            y: 0,
+        },
+        methods:{
+            updateName() { 
+                    this.name = 'Limbu';
+                },
+            getCoord(){
 
+            }
+            }  
     })
 </script>
+<style>
+    .box {
+        background: red;
+        width: 200px;
+        height:200px;
+    }
+</style>
 </html>
