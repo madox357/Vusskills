@@ -31,8 +31,9 @@
             updateName() { 
                     this.name = 'Limbu';
                 },
-            getCoord(){
-
+            getCoord(event){
+                this.x = event.clientX;
+                this.y = event.clientY;
             }
             }  
     })
